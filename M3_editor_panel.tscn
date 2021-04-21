@@ -1,0 +1,108 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Game/Editor/M3_editor_panel.gd" type="Script" id=1]
+
+[node name="VBC_m3_cond_generator" type="VBoxContainer"]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = -24.0
+margin_bottom = 30.0
+rect_min_size = Vector2( 600, 0 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SC_settings" type="ScrollContainer" parent="."]
+margin_right = 1024.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 0, 20 )
+
+[node name="HBC_settings" type="HBoxContainer" parent="SC_settings"]
+margin_right = 385.0
+margin_bottom = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBC_steps" type="HBoxContainer" parent="SC_settings/HBC_settings"]
+margin_right = 89.0
+margin_bottom = 20.0
+
+[node name="Label" type="Label" parent="SC_settings/HBC_settings/HBC_steps"]
+margin_top = 3.0
+margin_right = 35.0
+margin_bottom = 17.0
+text = "Steps"
+
+[node name="HSlider_step" type="HSlider" parent="SC_settings/HBC_settings/HBC_steps"]
+margin_left = 39.0
+margin_right = 89.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 50, 16 )
+
+[node name="HBC_coins" type="HBoxContainer" parent="SC_settings/HBC_settings"]
+margin_left = 93.0
+margin_right = 182.0
+margin_bottom = 20.0
+
+[node name="Label" type="Label" parent="SC_settings/HBC_settings/HBC_coins"]
+margin_top = 3.0
+margin_right = 35.0
+margin_bottom = 17.0
+text = "Coins"
+
+[node name="HSlider_coins" type="HSlider" parent="SC_settings/HBC_settings/HBC_coins"]
+margin_left = 39.0
+margin_right = 89.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 50, 16 )
+max_value = 100000.0
+
+[node name="HBC_time" type="HBoxContainer" parent="SC_settings/HBC_settings"]
+margin_left = 186.0
+margin_right = 272.0
+margin_bottom = 20.0
+
+[node name="Label" type="Label" parent="SC_settings/HBC_settings/HBC_time"]
+margin_top = 3.0
+margin_right = 32.0
+margin_bottom = 17.0
+text = "Time"
+
+[node name="HSlider_time" type="HSlider" parent="SC_settings/HBC_settings/HBC_time"]
+margin_left = 36.0
+margin_right = 86.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 50, 16 )
+max_value = 600.0
+
+[node name="HBC_blue" type="HBoxContainer" parent="SC_settings/HBC_settings"]
+margin_left = 276.0
+margin_right = 385.0
+margin_bottom = 20.0
+
+[node name="Label" type="Label" parent="SC_settings/HBC_settings/HBC_blue"]
+margin_right = 55.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 20 )
+text = "Selected"
+
+[node name="HSlider_selected" type="HSlider" parent="SC_settings/HBC_settings/HBC_blue"]
+margin_left = 59.0
+margin_right = 109.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 50, 16 )
+
+[node name="SC_types" type="ScrollContainer" parent="."]
+margin_top = 24.0
+margin_right = 1024.0
+margin_bottom = 74.0
+rect_min_size = Vector2( 0, 50 )
+
+[node name="HBC_types" type="HBoxContainer" parent="SC_types"]
+custom_constants/separation = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
