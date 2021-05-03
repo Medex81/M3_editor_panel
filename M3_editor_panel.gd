@@ -2,7 +2,7 @@ extends VBoxContainer
 
 # ПСЕВДОНИМЫ УЗЛОВ
 onready var container_cell_types = $SC_types/HBC_types
-onready var cell_type_base = preload("res://Game/Scenes/Field.tscn")
+onready var cell_type_base = preload("res://Game/Editor/Field.tscn")
 onready var effects_mgr = preload("res://Game/Managers/Effects_mgr.gd").new()
 
 # ПЕРЕМЕННЫЕ
@@ -15,7 +15,9 @@ signal send_sel_cell_type_changed(type)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	var next_cell_type = cell_type_base.instance()
+	container_cell_types.add_child(next_cell_type)
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

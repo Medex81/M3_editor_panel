@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Game/Editor/Field.gd" type="Script" id=1]
+
+[sub_resource type="StreamTexture" id=1]
+resource_local_to_scene = true
+flags = 4
+load_path = "res://.import/stone_blue.png-aba1b00ea9c1ce3b68fd5d418ef3f864.stex"
+
+[node name="Node2D" type="TextureRect"]
+margin_right = 47.0
+margin_bottom = 47.0
+rect_min_size = Vector2( 47, 47 )
+texture = SubResource( 1 )
+expand = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="gui_input" from="." to="." method="_on_Node2D_gui_input"]
+[connection signal="mouse_entered" from="." to="." method="_on_Node2D_mouse_entered"]
